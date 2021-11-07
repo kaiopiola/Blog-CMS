@@ -1,0 +1,50 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Akronim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+html,
+h1,
+h2,
+p,
+a {
+    font-family: "Montserrat Alternates", cursive;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.home-post-bg {
+    padding: 4rem;
+    background-color: #00000086;
+    max-height: 180px;
+}
+
+.post-title-bg {
+  background-color: #00000086;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media(min-width: 768px) {
+    .home-post-bg {
+        padding: 4rem;
+    }
+}
+
+.home-post {
+    transition: all 1s;
+}
+
+.home-post:hover {
+    // transform: scale(1.2);
+}
