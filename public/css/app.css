@@ -21811,3 +21811,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
