@@ -8,7 +8,7 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div style="background-image: url(https://blog.templatetoaster.com/wp-content/uploads/2020/05/Bootstrap-5-Facebbok.png); background-size: cover; background-repeat: no-repeat; background-position: center;"
+            <div style="background-image: url(https://c4.wallpaperflare.com/wallpaper/791/78/449/video-games-the-legend-of-zelda-link-retro-games-wallpaper-preview.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;"
                 width="100%" height="100%">
                 <svg class="bd-placeholder-img" width="100%" height="500px" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -18,9 +18,9 @@
 
             <div class="container">
                 <div class="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p>Some representative placeholder content for the first slide of the carousel.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                    <h1>It's dangerous to go alone. Take this!</h1>
+                    <p>Registre-se em nosso site agora e ganhe um emblema de lançamento!.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Crie sua conta!</a></p>
                 </div>
             </div>
         </div>

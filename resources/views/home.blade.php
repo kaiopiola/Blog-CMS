@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{-- {{session()->getid()}} --}}
+    {{-- {{session()->getid()}} --}}
     @include('layouts.banner')
 
     <div class="container-fluid">
@@ -31,6 +31,20 @@
             </div>
         </div>
     </div>
+
+    <div class="text-dark bg-light">
+    <textarea name="" id="editor" cols="30" rows="30"></textarea>
     </div>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script> --}}
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
 @endsection

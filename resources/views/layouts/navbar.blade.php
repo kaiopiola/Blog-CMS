@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100" style="z-index:9"
     aria-label="Fourth navbar example">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ config('app.name', 'Laravel') }}</a>
+        <a class="navbar-brand" href="/">
+            <img src="https://www.pngkey.com/png/full/98-983521_png-images-pngs-floppy-floppy-disk-floppy-disc.png" width="30px" alt="">
+            {{ config('app.name', 'Laravel') }}
+        </a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
             aria-label="Toggle navigation">
