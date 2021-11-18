@@ -4,6 +4,12 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+
+# Admin
+use App\Http\Controllers\Admin\IndexController as AdminIndexController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +27,23 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/sitemap.xml', [SitemapController::class, 'generate']);
 
-# Web Routes
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+# User Web Routes
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home'); // Revisar essa rota depois
 Route::get('/post/{url}', [BlogController::class, 'show'])->name('post');
 
+
+# Admin Web Routes
+Route::prefix('admin')->group(function(){
+    Route::get('/', [AdminIndexController::class, 'index'])->name('admin.index');
+    Route::get('/blog', [AdminBlogController::class, 'index'])->name('admin.blog.index');
+    Route::get('/blog/novo', [AdminBlogController::class, 'create'])->name('admin.blog.create');
+    Route::post('/blog/novo', [AdminBlogController::class, 'store'])->name('admin.blog.store');
+});
+
+
 # Test Routes
-Route::get('/preview/{view}', [App\Http\Controllers\PreviewController::class, 'render'])->name('preview');
+Route::get('/preview/{view}', [PreviewController::class, 'render'])->name('preview');
 
 
