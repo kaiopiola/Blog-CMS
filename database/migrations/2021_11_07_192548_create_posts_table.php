@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('description');
             $table->string('image')->nullable();
             $table->string('keywords')->nullable();
-            $table->integer('author');
+            $table->integer('author'); #ID do autor
             $table->longText('content')->nullable();
             $table->boolean('is_public');
             $table->string('url')->unique();

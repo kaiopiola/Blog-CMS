@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Posts;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -14,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Posts::all();
+        return view('admin.blog.index', ['posts' => $posts]);
     }
 
     /**
@@ -24,7 +26,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        $editing = false;
+        return view('admin.blog.create', ['editing' => $editing]);
     }
 
     /**
@@ -35,7 +38,15 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new Posts();
+        $post->title = $request->title;
+        $post->description = $request->description;
+        $post->content = $request->content;
+        $post->url = rand(1000, 9999);
+        $post->author = 1;
+        $post->is_public = 1;
+        $post->save();
+        return redirect(route('admin.blog.index'))->with('success');
     }
 
     /**
