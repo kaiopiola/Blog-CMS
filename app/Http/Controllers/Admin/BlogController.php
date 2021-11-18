@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Posts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -42,10 +43,15 @@ class BlogController extends Controller
         $post->title = $request->title;
         $post->description = $request->description;
         $post->content = $request->content;
+        $request->image ? $image = Storage::put('images/posts', $request->image) : $image = false;
+        $image ? $post->image = $image : false;
         $post->url = rand(1000, 9999);
         $post->author = 1;
         $post->is_public = 1;
         $post->save();
+        
+        dd($image); // Issue #5 - Deveria subir a imagem e retornar o caminho para a mesma, para então armazenar no banco.
+        
         return redirect(route('admin.blog.index'))->with('success');
     }
 
@@ -57,7 +63,7 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        // $post->image ? $post->image = Storage::url($post->image) : false;
     }
 
     /**

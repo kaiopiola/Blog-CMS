@@ -16,6 +16,10 @@
                         <input type="text" class="form-control" name="description">
                     </div>
                     <div class="form-group">
+                        <label for="image">image</label>
+                        <input type="file" class="form-control" name="image">
+                    </div>
+                    <div class="form-group">
                         <label for="content">content</label>
                         <div class="bg-light text-dark">
                             <textarea name="content" id="editor" cols="30" rows="10"></textarea>

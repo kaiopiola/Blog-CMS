@@ -5,6 +5,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
+                <a href="{{ route('admin.blog.create') }}"><button class="btn btn-primary">Novo</button></a>
+            </div>
+
+            <div class="col-12">
 
                 <table class="table table-dark table-striped">
                     <thead>
@@ -28,9 +32,7 @@
                 </table>
 
             </div>
-            <div class="col-12">
-                <a href="{{ route('admin.blog.create') }}"><button>Novo</button></a>
-            </div>
+            
         </div>
     </div>
 @endsection
