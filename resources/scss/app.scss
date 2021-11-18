@@ -1,5 +1,10 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$purple-1: #000000;
+$purple-2: #3E065F;
+$purple-3: #700B97;
+$purple-4: #8E05C2;
+
 // Login Page
 
 .form-signin {
@@ -10,3 +15,15 @@
 }
 
 // End Login Page
+
+.bg-dark {
+    background-color: $purple-1 !important;
+}
+
+.btn-primary {
+    background-color: $purple-3 !important;
+}
+
+.ck-editor__editable_inline {
+    min-height: 400px;
+}
