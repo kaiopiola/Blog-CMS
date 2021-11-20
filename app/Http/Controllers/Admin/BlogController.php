@@ -28,7 +28,8 @@ class BlogController extends Controller
     public function create()
     {
         $editing = false;
-        return view('admin.blog.create', ['editing' => $editing]);
+        $post = new Posts();
+        return view('admin.blog.create', ['editing' => $editing, 'post' => $post]);
     }
 
     /**
@@ -49,10 +50,8 @@ class BlogController extends Controller
         $post->author = 1;
         $post->is_public = 1;
         $post->save();
-        
-        dd($image); // Issue #5 - Deveria subir a imagem e retornar o caminho para a mesma, para então armazenar no banco.
-        
-        return redirect(route('admin.blog.index'))->with('success');
+                
+        return redirect(route('admin.blog.index'))->with('message', 'Post inserido com sucesso!');
     }
 
     /**
@@ -63,7 +62,9 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        // $post->image ? $post->image = Storage::url($post->image) : false;
+        $post = Posts::findOrFail($id);
+        $post->image ? $post->image = Storage::url($post->image) : false;
+        return view('admin.blog.show', ['post' => $post]);
     }
 
     /**
@@ -74,7 +75,9 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $editing = true;
+        $post = Posts::findOrFail($id);
+        return view('admin.blog.create', ['editing' => $editing, 'post' => $post]);
     }
 
     /**

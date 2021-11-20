@@ -24,6 +24,14 @@
 
 <body class="bg-dark text-light">
     @include('admin.layouts.navbar')
+
+    @if (session()->has('message'))
+        <div class="alert alert-success alert-dismissible">
+            {{ session()->get('message') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
     <main class="pt-5">
         @yield('content')
     </main>
