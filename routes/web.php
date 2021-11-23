@@ -9,7 +9,7 @@ use App\Http\Controllers\HomeController;
 # Admin
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
 use App\Http\Controllers\Admin\BlogController as AdminBlogController;
-
+use App\Http\Controllers\PreviewController;
 
 /*
 |--------------------------------------------------------------------------
