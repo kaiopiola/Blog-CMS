@@ -32,6 +32,7 @@
         </div>
     </div>
 
+
     <div class="text-dark bg-light">
     <textarea name="" id="editor" cols="30" rows="30"></textarea>
     </div>
@@ -40,7 +41,7 @@
     <script>
         ClassicEditor
             .create(document.querySelector('#editor'), {
-                
+
             })
             .catch(error => {
                 console.error(error);
