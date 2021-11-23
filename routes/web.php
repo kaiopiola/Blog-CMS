@@ -41,7 +41,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/blog/novo', [AdminBlogController::class, 'create'])->name('admin.blog.create');
     Route::post('/blog/novo', [AdminBlogController::class, 'store'])->name('admin.blog.store');
 
-    Route::get('/blog/editar/{id}', [AdminBlogController::class, 'edit'])->name('admin.blog.create');
+    Route::get('/blog/editar/{id}', [AdminBlogController::class, 'edit'])->name('admin.blog.edit');
 
     Route::get('/blog/preview/{id}', [AdminBlogController::class, 'show'])->name('admin.blog.show');
 
