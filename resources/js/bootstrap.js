@@ -9,10 +9,9 @@ window._ = require('lodash');
 try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
-    require('bootstrap');
-} catch (e) { }
 
-// require('@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter.js'); // Não precisa
+    require('bootstrap');
+} catch (e) {}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
