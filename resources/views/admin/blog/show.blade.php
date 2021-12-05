@@ -7,6 +7,9 @@
                 <div class="col-md-12">
                     <h1>{{ $post->title }}</h1>
                 </div>
+                <div class="">
+                  <img src="{{ $post->image }}" alt="">
+                </div>
                 <div class="col-12">
                     <div class="content">
                         {!! $post->content !!}
@@ -15,5 +18,4 @@
             </div>
         </div>
     </section>
-
 @endsection

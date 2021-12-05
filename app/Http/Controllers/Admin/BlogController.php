@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+  
     /**
      * Display a listing of the resource.
      *
@@ -50,7 +55,7 @@ class BlogController extends Controller
         $post->author = 1;
         $post->is_public = 1;
         $post->save();
-                
+
         return redirect(route('admin.blog.index'))->with('message', 'Post inserido com sucesso!');
     }
 

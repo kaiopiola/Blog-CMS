@@ -30,7 +30,6 @@ Route::get('/sitemap.xml', [SitemapController::class, 'generate']);
 
 # User Web Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'index'])->name('home'); // Revisar essa rota depois
 Route::get('/post/{url}', [BlogController::class, 'show'])->name('post');
 
 
@@ -50,5 +49,3 @@ Route::prefix('admin')->group(function(){
 
 # Test Routes
 Route::get('/preview/{view}', [PreviewController::class, 'render'])->name('preview');
-
-
