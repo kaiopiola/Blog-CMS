@@ -1,7 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url(https://fonts.googleapis.com/css2?family=Akronim&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap);
 @charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -11289,41 +11286,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html,
-h1,
-.h1,
-h2,
-.h2,
-p,
-a {
-  font-family: "Montserrat Alternates", cursive;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-.home-post-bg {
-  padding: 4rem;
-  background-color: #00000086;
-  max-height: 180px;
-}
-
-.post-title-bg {
-  background-color: #00000086;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  .home-post-bg {
-    padding: 4rem;
-  }
-}
-.home-post {
-  transition: all 1s;
-}
 @charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
@@ -22607,11 +22569,28 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.form-signin {
+#login .form-signin {
   width: 100%;
   max-width: 330px;
   padding: 15px;
   margin: auto;
+}
+
+body {
+  background-color: #587B7F;
+  background: linear-gradient(180deg, #587B7F 0%, #394032 100%);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: #1E2019;
+}
+.navbar .nav-item {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .bg-dark {
@@ -22619,7 +22598,31 @@ textarea.form-control-lg {
 }
 
 .btn-primary {
-  background-color: #700B97 !important;
+  background-color: #CFEE9E !important;
+  border-color: #8DAB7F !important;
+  color: #8DAB7F !important;
+}
+
+.btn-primary:hover {
+  background-color: #394032 !important;
+  color: white;
+}
+
+.nav-link, .btn-link, a {
+  color: #CFEE9E;
+}
+
+.nav-link:hover, .btn-link:hover, a:hover {
+  color: #8DAB7F;
+}
+
+.form-check-input:checked {
+  background-color: #CFEE9E;
+  border-color: #8DAB7F;
+}
+
+.form-floating label {
+  color: #394032 !important;
 }
 
 .ck-editor__editable_inline {

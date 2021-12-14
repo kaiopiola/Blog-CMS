@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <a href="{{ route('admin.blog.create') }}"><button class="btn btn-primary">Novo</button></a>
+                {{-- <a href="{{ route('admin.category.create') }}"><button class="btn btn-primary">Novo</button></a> --}}
             </div>
 
             <div class="col-12">
@@ -14,18 +14,20 @@
                     <thead>
                         <tr>
                             <th scope="col">id</th>
-                            <th scope="col">title</th>
+                            <th scope="col">cat_name</th>
+                            <th scope="col">parent</th>
                             <th scope="col">created_at</th>
-                            <th scope="col">is_public</th>
+                            <th scope="col">is_active</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($posts as $post)
+                        @foreach ($categories as $category)
                             <tr>
-                                <th scope="row">{{ $post->id }}</th>
-                                <td>{{ $post->title }}</td>
-                                <td>{{ date("d/m/Y", strtotime($post->created_at)); }}</td>
-                                <td>{{ $post->is_public }}</td>
+                                <th scope="row">{{ $category->id }}</th>
+                                <td>{{ $category->cat_name }}</td>
+                                <td>{{ $category->parent }}</td>
+                                <td>{{ date("d/m/Y", strtotime($category->created_at)); }}</td>
+                                <td>{{ $category->is_active }}</td>
                             </tr>
                         @endforeach
                     </tbody>

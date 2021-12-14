@@ -1,27 +1,70 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "auth";
 
 $purple-1: #000000;
-$purple-2: #3E065F;
-$purple-3: #700B97;
-$purple-4: #8E05C2;
+$purple-2: #3e065f;
+$purple-3: #700b97;
+$purple-4: #8e05c2;
 
-// Login Page
+// $pallete-1: #45425a;
+// $pallete-2: #575c55;
+// $pallete-3: #6c7d47;
+// $pallete-4: #96a13a;
+// $pallete-5: #acc12f;
 
-.form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+$pallete-1: #587B7F;
+$pallete-2: #1E2019;
+$pallete-3: #394032;
+$pallete-4: #8DAB7F;
+$pallete-5: #CFEE9E;
+
+body {
+    background-color: $pallete-1;
+    background: linear-gradient(180deg, $pallete-1 0%, $pallete-3 100%);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
 }
 
-// End Login Page
+.navbar {
+    background-color: $pallete-2;
+    .nav-item {
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
 
 .bg-dark {
     background-color: $purple-1 !important;
 }
 
 .btn-primary {
-    background-color: $purple-3 !important;
+    background-color: $pallete-5 !important;
+    border-color: $pallete-4 !important;
+    color: $pallete-4 !important;
+}
+
+.btn-primary:hover {
+    background-color: $pallete-3 !important;
+    color: white;
+}
+
+.nav-link, .btn-link, a {
+    color: $pallete-5;
+}
+
+.nav-link:hover, .btn-link:hover, a:hover {
+    color: $pallete-4;
+}
+
+.form-check-input:checked {
+    background-color: $pallete-5;
+    border-color: $pallete-4;
+}
+
+.form-floating label {
+    color: $pallete-3 !important;
 }
 
 .ck-editor__editable_inline {

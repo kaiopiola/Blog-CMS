@@ -22,7 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-dark text-light">
+<body>
     @include('admin.layouts.navbar')
 
     @if (session()->has('message'))

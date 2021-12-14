@@ -26,8 +26,8 @@ class CreateUsersTable extends Migration
         });
         DB::table('users')->insert([
             'name' => 'Kaio Piola',
-            'email' => 'kaio.piola@hotmail.com',
-            'password' => Hash::make('Kaio1998'),
+            'email' => 'admin@savestate.com.br',
+            'password' => Hash::make('admin'),
             'user_level' => 1,
         ]);
     }

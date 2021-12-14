@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100" style="z-index:9"
+<nav class="navbar navbar-expand-md position-fixed w-100" style="z-index:9"
     aria-label="Fourth navbar example">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">

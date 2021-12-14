@@ -14,6 +14,9 @@
             <a class="nav-link" aria-current="page" href="{{ route('admin.blog.index') }}">Blog</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{ route('admin.categories.index') }}">Categorias</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item">
